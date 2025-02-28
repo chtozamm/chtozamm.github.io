@@ -1,0 +1,12 @@
+{{ $showFooter := default true .Site.Params.showFooter }}
+{{ if $showFooter }}
+    {{ if not .Site.Params.footerContent }}
+    <p>
+		&copy; 2025 Mark M @ Dreamwalkers 🌙
+	</p>
+    {{ end }}
+    
+    {{ with .Site.Params.footerContent }}
+    <p>{{ . | markdownify }}</p>
+    {{ end }}
+{{ end }}
