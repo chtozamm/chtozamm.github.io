@@ -2,6 +2,7 @@
 title: "From the ashes a fire shall be woken"
 date: "2025-02-28T20:30:00+03:00"
 draft: false
+hideBackToTop: true
 ---
 
 All that is gold does not glitter,  
