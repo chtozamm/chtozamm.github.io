@@ -19,17 +19,16 @@
 <meta name="description" content="{{ .Params.Description }}"/>
 {{- end }}
 
-{{ if .Param "fediverse" }}
-<meta name="fediverse:creator" content="{{ .Params.Fediverse }}">
-{{ end }}
-
 <title>
     {{ if .IsHome }}
-    {{ site.Title }}
+        {{ .Site.Title }}
+    {{ else if and (eq site.Language.Lang "ru") (eq .Title "Posts") }}
+        {{ printf "%s | %s" "Публикации" .Site.Title }}
     {{ else }}
-    {{ printf "%s | %s" .Title site.Title }}
+        {{ printf "%s | %s" .Title .Site.Title }}
     {{ end }}
 </title>
+
 
 <link rel="canonical" href="{{ .Permalink }}"/>
 
@@ -37,12 +36,3 @@
 
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
-
-{{ if hugo.IsProduction }}
-{{ template "_internal/google_analytics.html" . }}
-
-{{ if .Site.Params.umami.enable }}
-{{ partial "umami.html" . }}
-{{ end }}
-{{ end }}
-
