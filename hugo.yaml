@@ -1,0 +1,68 @@
+baseURL: https://chtozamm.github.io/
+languageCode: en-us
+defaultContentLanguage: en
+title: Mark M
+languages:
+  en:
+    disabled: false
+    languageCode: en
+    languageName: EN
+    weight: 1
+  ru:
+    disabled: false
+    languageCode: ru
+    languageName: RU
+    weight: 2
+    params:
+      menu:
+        - name: публикации
+          url: /ru/posts
+        - name: проекты
+          url: /ru/projects
+        - name: обо мне
+          url: /ru/about
+      description: Личный блог
+      homeCollectionTitle: Публикации
+      homeCollection: posts
+      homeIntroTitle: Привет!
+      homeIntroContent: >
+        Я разработчик, увлеченный разработкой инструментов командной строки и
+        веб-приложений.
+
+
+        Я также люблю природу, фэнтези и свою чудесную девушку.
+params:
+  menu:
+    - name: posts
+      url: /posts
+    - name: projects
+      url: /projects
+    - name: about
+      url: /about
+  description: A personal blog
+  theme: auto
+  colorPalette: default
+  hideHeader: false
+  paginationSize: 100
+  listSummaries: false
+  listDateFormat: 2 Jan 2006
+  breadcrumbs: true
+  homeCollectionTitle: Posts
+  homeCollection: posts
+  homeIntroTitle: Hello there!
+  homeIntroContent: >
+    I am a Software Engineer passionate about developing terminal and web
+    applications.
+
+
+    I also love nature, fantasy and my wonderful girlfriend.
+  social:
+    - name: github
+      url: https://github.com/chtozamm
+    - name: telegram
+      url: https://t.me/chtozamm
+taxonomies:
+  tag: tags
+markup:
+  highlight:
+    style: algol

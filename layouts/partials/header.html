@@ -4,9 +4,13 @@
 
     {{ if or (not (.Param "hideHeader")) .IsHome }}
 
+    <div class="header-top">
     <h1 class="header-title">
-        <a href="{{ site.BaseURL }}">{{ site.Title }}</a>
+        <a href="{{ if eq .Lang "ru" }}{{ .Site.BaseURL }}ru/{{ else }}{{ .Site.BaseURL }}{{ end }}">{{ .Site.Title }}</a>
     </h1>
+
+    {{ partial "language-switcher.html" . }}
+    </div>
 
     <div class="flex">
         {{ $currentPage := . }}

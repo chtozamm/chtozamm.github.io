@@ -1,12 +1,16 @@
 {{ define "main" }}
 
 <div class="not-found">
-
-    <div>
-        <h1> typo? </h1>
-        <p> Click <a href="/"> here </a> to return to home </p>
-    </div>
-
+  {{ if eq site.Language.Lang "ru" }}
+  <div>
+    <h1>опечатка?</h1>
+    <p>Нажмите <a href="/"> сюда </a> чтобы вернуться на главную страницу</p>
+  </div>
+  {{else}}
+  <div>
+    <h1>typo?</h1>
+    <p>Click <a href="/"> here </a> to return to home</p>
+  </div>
+  {{end}}
 </div>
-
 {{ end }}

@@ -1,9 +1,13 @@
 {{ if .Site.Params.breadcrumbs }}
 <div class="breadcrumbs">
-    {{ range .Ancestors.Reverse }}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    <span class="breadcrumbs-separator"> / </span>
-    {{ end }}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  {{ range .Ancestors.Reverse }}
+  <a href="{{ .RelPermalink }}"
+    >{{ if eq .Title "Posts" }}{{ T "posts" }}{{ else }}{{ .Title }}{{ end }}</a
+  >
+  <span class="breadcrumbs-separator"> / </span>
+  {{ end }}
+  <a href="{{ .RelPermalink }}"
+    >{{ if eq .Title "Posts" }}{{ T "posts" }}{{ else }}{{ .Title }}{{ end }}</a
+  >
 </div>
 {{ end }}

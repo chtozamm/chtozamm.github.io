@@ -27,4 +27,3 @@ Currently, I’m diving into the world of **DevOps**, learning how to orchestrat
 🌐 I'm fluent in both English and Russian, and in my spare time, I'm learning Italian and Norwegian.
 
 🌳 Beyond the tech realm, I have a passion for music, photography, and design. I also enjoy studying the sciences, exploring nature and wildlife, and traveling to new places.
-
